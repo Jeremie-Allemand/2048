@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2048", "2048\2048.csproj", "{B0828CD6-5F1A-484A-8BD0-A8FDAB000E60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTest2048", "XUnitTest2048\XUnitTest2048.csproj", "{50E0A72E-67A7-4C54-A005-2965AAA12507}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0828CD6-5F1A-484A-8BD0-A8FDAB000E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0828CD6-5F1A-484A-8BD0-A8FDAB000E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0828CD6-5F1A-484A-8BD0-A8FDAB000E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0828CD6-5F1A-484A-8BD0-A8FDAB000E60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50E0A72E-67A7-4C54-A005-2965AAA12507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E0A72E-67A7-4C54-A005-2965AAA12507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E0A72E-67A7-4C54-A005-2965AAA12507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E0A72E-67A7-4C54-A005-2965AAA12507}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDB52C07-76AE-47E7-A972-7F088AAFCC5D}
+	EndGlobalSection
+EndGlobal
