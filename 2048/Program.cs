@@ -6,7 +6,7 @@ namespace _2048
     {
         static void Main(string[] args)
         {
-            Game game = new Game();
+            Game game = new Game(4);
             while (!game.isGameOver()) 
             {
                 Console.WriteLine("Score : " + game + "\n");

@@ -13,10 +13,10 @@ namespace _2048
         static readonly Random Random = new Random();
         public Grid Grid { get; set; }
 
-        private int Score { get; set; }
-        public Game()
+        public int Score { get; set; }
+        public Game(int size)
         {
-            Grid = new Grid();
+            Grid = new Grid(size);
             AddNewCell();
             AddNewCell();
             /*
@@ -47,14 +47,14 @@ namespace _2048
 
             var c = Grid.GetRandomEmptyCell();
             if (c != null)
-                c.Number = Random.Next(4) > 0 ? 2 : 4;
+                c.Number = Random.Next(10) > 0 ? 2 : 4;
         }
 
         public Cell[] ShiftCells(Cell[] row)
         {
             
 
-            for (int i = 0; i < Grid.SIZE; i++)
+            for (int i = 0; i < Grid.Size; i++)
             {
                 bool move = false;
                 if (i > 0)
@@ -93,12 +93,12 @@ namespace _2048
             switch(direction)
             {
                 case Direction.Left:
-                    for (int y = 0; y < Grid.SIZE; y++)
+                    for (int y = 0; y < Grid.Size; y++)
                     {
                         Cell[] row = Grid.getRow(y);
                         Cell[] newRow = ShiftCells(row);
 
-                        for (int x = 0; x < Grid.SIZE; x++)
+                        for (int x = 0; x < Grid.Size; x++)
                         {
                             Grid.cells[y, x] = newRow[x];
                         }
@@ -106,29 +106,29 @@ namespace _2048
                     break;
 
                 case Direction.Right:
-                    for (int y = 0; y < Grid.SIZE; y++)
+                    for (int y = 0; y < Grid.Size; y++)
                     {
                         Cell[] row = Grid.getRow(y, true);
 
 
                         Cell[] newRow = ShiftCells(row);
 
-                        for (int x = 0; x < Grid.SIZE; x++)
+                        for (int x = 0; x < Grid.Size; x++)
                         {
-                            Grid.cells[y, Grid.SIZE-x-1] = newRow[x];
+                            Grid.cells[y, Grid.Size-x-1] = newRow[x];
                         }
                     }
                     break;
 
                 case Direction.Up:
-                    for (int x = 0; x < Grid.SIZE; x++)
+                    for (int x = 0; x < Grid.Size; x++)
                     {
                         Cell[] col = Grid.getColumn(x);
 
 
                         Cell[] newCol = ShiftCells(col);
 
-                        for (int y = 0; y < Grid.SIZE; y++)
+                        for (int y = 0; y < Grid.Size; y++)
                         {
                             Grid.cells[y, x] = newCol[y];
                         }
@@ -136,16 +136,16 @@ namespace _2048
                     break;
 
                 case Direction.Down:
-                    for (int x = 0; x < Grid.SIZE; x++)
+                    for (int x = 0; x < Grid.Size; x++)
                     {
                         Cell[] col = Grid.getColumn(x,true);
 
 
                         Cell[] newCol = ShiftCells(col);
 
-                        for (int y = 0; y < Grid.SIZE; y++)
+                        for (int y = 0; y < Grid.Size; y++)
                         {
-                            Grid.cells[Grid.SIZE-y-1, x] = newCol[y];
+                            Grid.cells[Grid.Size-y-1, x] = newCol[y];
                         }
                     }
                     break;
@@ -160,18 +160,18 @@ namespace _2048
         public bool isGameOver() 
         {
             int[,] numbers = Grid.getNumbers();
-            for (int i = 1; i < Grid.SIZE-1; i++)
+            for (int i = 1; i < Grid.Size-1; i++)
             {
-                for (int j = 0; j < Grid.SIZE; j++)
+                for (int j = 0; j < Grid.Size; j++)
                 {
                     if(numbers[i,j] == numbers[i-1,j] && numbers[i, j] == numbers[i + 1, j])
                         return false;
                 }
             }
 
-            for (int i = 1; i < Grid.SIZE - 1; i++)
+            for (int i = 1; i < Grid.Size - 1; i++)
             {
-                for (int j = 0; j < Grid.SIZE; j++)
+                for (int j = 0; j < Grid.Size; j++)
                 {
                     if (numbers[j, i] == numbers[j, i-1] && numbers[j, i] == numbers[j, i+1])
                         return false;

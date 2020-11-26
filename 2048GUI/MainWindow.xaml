@@ -1,0 +1,34 @@
+﻿<Window x:Class="_2048GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2048GUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="450" KeyDown="Window_KeyDown">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="400" />
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" Text="2048" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="50"/>
+        <UniformGrid x:Name="gameGrid" Width="400" Height="400" Grid.Row="2" HorizontalAlignment="Center" Background="LightGray">
+            <UniformGrid.Resources>
+                <Style TargetType="Label">
+
+                    <Setter Property="FontSize" Value="25"/>
+                    <Setter Property="FontFamily" Value="Clear Sans"/>
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="VerticalAlignment" Value="Stretch"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="2"/>
+                </Style>
+            </UniformGrid.Resources>
+        </UniformGrid>
+        <TextBlock HorizontalAlignment="Left" Margin="200,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" Height="33"><Run Language="fr-ch" Name="Score"/><LineBreak/><Run Language="fr-ch"/></TextBlock>
+
+    </Grid>
+
+</Window>

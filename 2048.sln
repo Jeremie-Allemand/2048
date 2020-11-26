@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2048", "2048\2048.csproj", "{B0828CD6-5F1A-484A-8BD0-A8FDAB000E60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTest2048", "XUnitTest2048\XUnitTest2048.csproj", "{50E0A72E-67A7-4C54-A005-2965AAA12507}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTest2048", "XUnitTest2048\XUnitTest2048.csproj", "{50E0A72E-67A7-4C54-A005-2965AAA12507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2048GUI", "2048GUI\2048GUI.csproj", "{8EC59332-94A2-40B4-9CC7-60E4D16DA3E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{50E0A72E-67A7-4C54-A005-2965AAA12507}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50E0A72E-67A7-4C54-A005-2965AAA12507}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50E0A72E-67A7-4C54-A005-2965AAA12507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EC59332-94A2-40B4-9CC7-60E4D16DA3E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EC59332-94A2-40B4-9CC7-60E4D16DA3E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EC59332-94A2-40B4-9CC7-60E4D16DA3E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EC59332-94A2-40B4-9CC7-60E4D16DA3E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
